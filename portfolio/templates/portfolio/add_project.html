@@ -1,25 +1,28 @@
 {% extends 'portfolio/base.html' %}
 
 {% block content %}
-<h1>Add a New Project</h1>
+<section class="form-section center-column">
+    <div class="form-card">
+        <h1>Add a New Project</h1>
 
-<form method="post">
-    {% csrf_token %}
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
 
-    {{ form.non_field_errors }}
+            {{ form.non_field_errors }}
 
-    {% for field in form %}
-    <p>
-        {{ field.label_tag }}<br>
-        {{ field }}
-        <br>
-        <span style="color:red;">
-            {{ field.errors }}
-        </span>
-    </p>
-    {% endfor %}
+            {% for field in form %}
+            <p>
+                {{ field.label_tag }}<br>
+                {{ field }}
+                <br>
+                <span style="color:red;">
+                    {{ field.errors }}
+                </span>
+            </p>
+            {% endfor %}
 
-    <button type="submit">Save</button>
-</form>
-
+            <button type="submit">Save</button>
+        </form>
+    </div>
+</section>
 {% endblock %}

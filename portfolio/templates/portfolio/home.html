@@ -1,6 +1,10 @@
 {% extends 'portfolio/base.html' %}
+{% load static %}
 
 {% block content %}
 <h1>Welcome to My Portfolio</h1>
 <p>This is the home page.</p>
+
+<img src="{% static 'portfolio/OIP.jpg' %}" alt="My Image">
+
 {% endblock %}

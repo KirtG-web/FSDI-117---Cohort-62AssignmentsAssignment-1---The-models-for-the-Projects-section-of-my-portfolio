@@ -1,13 +1,15 @@
-<!-- portfolio/templates/portfolio/skills.html -->
 {% extends 'portfolio/base.html' %}
 
 {% block content %}
-<h1>Skills</h1>
-<ul>
-    {% for skill in skills %}
-    <li>{{ skill.name }}</li>
-    {% empty %}
-    <li>No skills added yet.</li>
-    {% endfor %}
-</ul>
+<section class="skills-section">
+    <h1>My Skills</h1>
+
+    <div class="skills-grid">
+        {% for skill in skills %}
+        <div class="skill-card">
+            {{ skill.name }}
+        </div>
+        {% endfor %}
+    </div>
+</section>
 {% endblock %}

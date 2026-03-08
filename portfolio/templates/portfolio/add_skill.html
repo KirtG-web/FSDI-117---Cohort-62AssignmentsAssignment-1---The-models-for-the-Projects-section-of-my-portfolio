@@ -1,10 +1,18 @@
 {% extends 'portfolio/base.html' %}
 
 {% block content %}
-<h1>Add a Skill</h1>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Save Skill</button>
-</form>
+
+<section class="center-column">
+    <h1>Add a Skill</h1>
+
+    <div class="form-card">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn">Save Skill</button>
+        </form>
+    </div>
+
+</section>
+
 {% endblock %}
